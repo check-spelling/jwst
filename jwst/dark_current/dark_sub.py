@@ -282,7 +282,7 @@ def average_MIRIdark_frames(dark_data, nints, ngroups, nframes, groupgap):
     # is less than science data, if so then we only need to find the
     # average for num_ints integrations (if science data only has
     # 1 integration then there is no need to average the second integration
-    # of the dark refefence file)
+    # of the dark reference file)
     num_ints = dint
     if(dint > nints):
         num_ints = nints
