@@ -556,12 +556,12 @@ properties:
             fits_keyword: OPMODE
             blend_table: True
           gwa_xtilt:
-            title: Grating wheel tilt along instrmnt model Y axis
+            title: Grating wheel tilt along instrument model Y axis
             type: number
             fits_keyword: GWA_XTIL
             blend_table: True
           gwa_ytilt:
-            title: Grating wheel tilt along instrmnt model X axis
+            title: Grating wheel tilt along instrument model X axis
             type: number
             fits_keyword: GWA_YTIL
             blend_table: True
