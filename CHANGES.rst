@@ -2240,7 +2240,7 @@ tso_photometry
 associations
 ------------
 
-- Refactor target acquistion handling [#4254]
+- Refactor target acquisition handling [#4254]
 
 emission
 --------
