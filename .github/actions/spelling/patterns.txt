@@ -1,0 +1,13 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# ANSI color codes
+\u001b\[\d+(?:;\d+)m
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+
+# file
+^[\w_]*\.fits
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
