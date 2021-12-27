@@ -86,10 +86,10 @@ class StraylightStep (Step):
                     self.log.info(' Modified Shepard weighting power %5.2f', self.power)
                     self.log.info(' Region of influence radius (pixels) %6.2f', self.roi)
 
-                    result = straylight.correct_mrs_modshepard(input_model,
-                                                               regions,
-                                                               self.roi,
-                                                               self.power)
+                    result = straylight.correct_mrs_modshephard(input_model,
+                                                                regions,
+                                                                self.roi,
+                                                                self.power)
 
                 result.meta.cal_step.straylight = 'COMPLETE'
 

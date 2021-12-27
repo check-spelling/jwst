@@ -4,7 +4,7 @@
 # 1's for gaps between slices.
 #
 # there are two algorithms in the module
-# the default one that is applied is correct_mrs_modshepard
+# the default one that is applied is correct_mrs_modshephard
 # correct_mrs was retained for testing purposes and can be removed
 # after it is confirmed the new algorithm is better are removing the
 # straylight
@@ -170,14 +170,14 @@ def correct_mrs(input_model, slice_map):
     return output
 
 
-def correct_mrs_modshepard(input_model, slice_map, roi, power):
+def correct_mrs_modshephard(input_model, slice_map, roi, power):
     """
     Straylight correction using a modified Shepard algorithm.
 
     Corrects the MIRI MRS data for straylight using a Modified version of the
     Shepard algorithm. Straylight is determined using an inverse distance weighting
     function. The inverse distance weighting is determined by module
-    ``shepard_2d_kernel(roi,power)``.
+    ``shephard_2d_kernel(roi,power)``.
 
     Parameters
     ----------
@@ -214,7 +214,7 @@ def correct_mrs_modshepard(input_model, slice_map, roi, power):
     output = input_model.copy()  # this is used in algorithm to
 
     # kernel matrix
-    w = shepard_2d_kernel(roi, power)
+    w = shephard_2d_kernel(roi, power)
     # mask is same size as slice_map - set = 0 everywhere
     mask = np.zeros_like(slice_map)
     # mask = 1 for slice gaps
@@ -263,7 +263,7 @@ def correct_mrs_modshepard(input_model, slice_map, roi, power):
     return output
 
 
-def shepard_2d_kernel(roi, power):
+def shephard_2d_kernel(roi, power):
     """
     Calculates the kernel matrix of Shepard's modified algorithm.
 
