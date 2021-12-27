@@ -1872,7 +1872,7 @@ extract_2d
 ----------
 
 - Change the source type for NIRSpec MOS sources with stellarity = -1 from
-  UNKOWN to POINT. [#4686]
+  UNKNOWN to POINT. [#4686]
 
 master_background
 -----------------
