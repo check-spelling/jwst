@@ -3,11 +3,11 @@ Unit tests for straylight correction
 """
 
 from jwst.datamodels import IFUImageModel
-from jwst.straylight.straylight import correct_mrs_modshepard, shepard_2d_kernel
+from jwst.straylight.straylight import correct_mrs_modshephard, shephard_2d_kernel
 import numpy as np
 
 
-def test_correct_mrs_modshepard():
+def test_correct_mrs_modshephard():
     """ Test Correct Straylight routine gives expected results for small region """
 
     image = IFUImageModel((16, 16))
@@ -24,7 +24,7 @@ def test_correct_mrs_modshepard():
     roi = 8
     power = 1
 
-    result = correct_mrs_modshepard(image, slice_map, roi, power)
+    result = correct_mrs_modshephard(image, slice_map, roi, power)
     compare = np.zeros((16, 16))
     compare[0, :] = [3.0696348e+01, 3.0638458e+01, 3.0652958e+01, 3.0663357e+01, 2.7708188e-01,
                      1.6659760e-01, 2.7704430e-01, 3.0657593e+01, 3.0652958e+01, 3.0657593e+01,
@@ -83,11 +83,11 @@ def test_correct_mrs_modshepard():
     assert(np.allclose(compare, result.data, rtol=1e-6))
 
 
-def test_shepard_kernel():
+def test_shephard_kernel():
     """ Test forming kernel gives expected results"""
     power = 1
     roi = 6
-    wkernel = shepard_2d_kernel(roi, power)
+    wkernel = shephard_2d_kernel(roi, power)
 
     kcompare = np.array([[0.0690355937, 0.110683431, 0.149561099, 0.166666667,
                           0.149561099, 1.10683431e-01, 6.90355937e-02],
@@ -106,11 +106,11 @@ def test_shepard_kernel():
     assert(np.allclose(wkernel, kcompare, rtol=1e-6))
 
 
-def test_shepard_kernel2():
+def test_shephard_kernel2():
     """ Test forming kernel gives expected results with power 2, roi 4"""
     power = 2
     roi = 4
-    wkernel = shepard_2d_kernel(roi, power)
+    wkernel = shephard_2d_kernel(roi, power)
 
     kcompare = np.array([[1.07233047e-02, 3.88932023e-02, 6.25000000e-02,
                           3.88932023e-02, 1.07233047e-02],

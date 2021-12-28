@@ -556,12 +556,12 @@ properties:
             fits_keyword: OPMODE
             blend_table: True
           gwa_xtilt:
-            title: Grating wheel tilt along instrmnt model Y axis
+            title: Grating wheel tilt along instrument model Y axis
             type: number
             fits_keyword: GWA_XTIL
             blend_table: True
           gwa_ytilt:
-            title: Grating wheel tilt along instrmnt model X axis
+            title: Grating wheel tilt along instrument model X axis
             type: number
             fits_keyword: GWA_YTIL
             blend_table: True
@@ -1090,7 +1090,7 @@ properties:
               LONG-CROSS-SCAN-CENTER, LONG-CROSS-SCAN-NOD1, LONG-CROSS-SCAN-NOD2,
               SHORT-CROSS-SCAN-CENTER, SHORT-CROSS-SCAN-NOD1, SHORT-CROSS-SCAN-NOD2,
 
-              # MIRI LRS sliteless
+              # MIRI LRS slitless
               5PIXEL-8x4-MAP-SLITLESS, 7PIXEL-9x3-MAP-SLITLESS,
               5PIXEL-SLITLESS-SCAN, 7PIXEL-SLITLESS-SCAN,
               1PIXEL-SLITLESS-SCAN-LONG, 1PIXEL-SLITLESS-SCAN-SHORT,

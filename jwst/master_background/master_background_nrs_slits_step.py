@@ -218,7 +218,7 @@ class MasterBackgroundNrsSlitsStep(Pipeline):
         # wrap the processing in a context manager that restores all parameters.
         with preserve_step_pars(self):
 
-            # When this step is called from another step/pipeliine,
+            # When this step is called from another step/pipeline,
             # retrieve the matching substep parameters from the parent.
             # This permits the substeps to perform similarly to what is
             # specified in the parent's substeps, such as skipping.
@@ -254,7 +254,7 @@ class MasterBackgroundNrsSlitsStep(Pipeline):
             mb_multislit = nirspec_utils.map_to_science_slits(pre_calibrated, master_background)
 
             # Now that the master background is pretending to be science,
-            # walk backwards through the steps to uncalibrate, using the
+            # walk backwards through the steps to decalibrate, using the
             # calibration factors carried from `pre_calibrated`.
             self.photom.use_correction_pars = True
             self.photom.inverse = True

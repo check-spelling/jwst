@@ -146,7 +146,7 @@ def do_correction_data(science_data, dark_data, dark_output=None):
         # Create a frame-averaged version of the dark data to match
         # the nframes and groupgap settings of the science data.
         # If the data are from MIRI, the darks are integration-dependent and
-        # we average them with a seperate routine.
+        # we average them with a separate routine.
 
         if instrument == 'MIRI':
             averaged_dark = average_MIRIdark_frames(
@@ -242,7 +242,7 @@ def average_MIRIdark_frames(dark_data, nints, ngroups, nframes, groupgap):
     """
     Averages the individual frames of data in a dark reference
     file to match the group structure of a science data set.
-    MIRI needs a seperate routine because the darks are integration dependent.
+    MIRI needs a separate routine because the darks are integration dependent.
     We need an average dark for each dark integration.
 
     Parameters
@@ -282,7 +282,7 @@ def average_MIRIdark_frames(dark_data, nints, ngroups, nframes, groupgap):
     # is less than science data, if so then we only need to find the
     # average for num_ints integrations (if science data only has
     # 1 integration then there is no need to average the second integration
-    # of the dark refefence file)
+    # of the dark reference file)
     num_ints = dint
     if(dint > nints):
         num_ints = nints

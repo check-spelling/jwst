@@ -11,7 +11,7 @@ class DarkData:
         the dark current code.  The data contained in this class comes from the
         dark reference data file.
 
-        Paramters
+        Parameters
         ---------
         dims: tuple
             A tuple of integers to describe the dimensions of the arrays used
@@ -58,7 +58,7 @@ class ScienceData:
         the dark current code.  The data in this class are for the science
         exposure data on which to do the dark current step.
 
-        Paramters
+        Parameters
         ---------
         science_model: data model
             Input data model, assumed to be a JWST RampModel like model.
