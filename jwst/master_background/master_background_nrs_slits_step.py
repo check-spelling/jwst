@@ -254,7 +254,7 @@ class MasterBackgroundNrsSlitsStep(Pipeline):
             mb_multislit = nirspec_utils.map_to_science_slits(pre_calibrated, master_background)
 
             # Now that the master background is pretending to be science,
-            # walk backwards through the steps to uncalibrate, using the
+            # walk backwards through the steps to decalibrate, using the
             # calibration factors carried from `pre_calibrated`.
             self.photom.use_correction_pars = True
             self.photom.inverse = True
